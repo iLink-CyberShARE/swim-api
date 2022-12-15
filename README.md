@@ -57,13 +57,13 @@ You will need to have a user account linked to the user database.
 7. Swagger docs available at http://localhost:3000/api-docs
 
 ## Documentation
-[SWIM Architecture Docs](https://water.cybershare.utep.edu/resources/docs/en2/architecture/layer-view/)
+[SWIM Architecture Docs](https://water.cybershare.utep.edu/resources/docs/en2/architecture/layer-view/)   
 [SWIM API Docs](https://water.cybershare.utep.edu/resources/docs/en2/backend/swim-api/)
 
 ## Contributors
-Luis Garnica Chavira - UTEP
-Aaron Zambrano - UTEP
-Ian Love - UTEP
+Luis Garnica Chavira - UTEP   
+Aaron Zambrano - UTEP   
+Ian Love - UTEP   
 
 ## Acknowledgements
 This material is based upon work supported by the National Science Foundation (NSF) under Grant No. 1835897.   

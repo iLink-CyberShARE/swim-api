@@ -1,0 +1,41 @@
+# Rename this configuration file to .env for local app execution (dev env)
+
+# Execution
+PORT = 3000
+
+# APP Information
+APPURL = http://localhost:3000  
+SERVERDESCRIPTION = Local Server - development
+APPVERSION = 2.6.2
+
+# Database Credentials
+
+## SWIM Logger database credentials
+LHOST = localhost
+LPORT = 3306
+LNAME = swim-log
+LUSER = changeuser
+LPASSWORD = changepassword
+LDIALECT = mysql
+
+## SWIM User database credentials
+UHOST = localhost
+UPORT = 3306
+UNAME = swim-users
+UUSER = changeuser
+UPASSWORD = changepassword
+UDIALECT = mysql
+
+## SWIM Core credentials
+SHOST = localhost
+SPORT = 27017
+SNAME = swim-modeling
+SUSER = changeuser
+SPASSWORD = changepassword
+
+# Guest Account Credentials
+GUSER = changeuser  
+GPASSWORD = changepassword
+
+# Other variables
+CONTEXT = http://purl.org/swim/vocab

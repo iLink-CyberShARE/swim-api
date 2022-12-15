@@ -1,0 +1,4 @@
+Docker commands:
+
+> docker build -t lagarnicachavira/swim-api:latest .
+> docker push lagarnicachavira/swim-api:latest      

@@ -1,0 +1,29 @@
+# ignore node_modules
+node_modules/
+
+# Ignore vs code IDE folders
+.vscode/
+
+# Ignore documentation folder
+docs/
+
+# Ignore git and cache folders
+.git
+.cache
+
+# Ignore markdown and text files
+*.md
+notes.txt
+
+# Ignore package lock
+package-lock.json
+
+# enviroment variables for development
+.env
+.env-sample
+
+# ignore docker compose file
+docker-compose.yml
+
+
+

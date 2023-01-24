@@ -74,4 +74,4 @@ Any opinions, findings, and conclusions or recommendations expressed in this mat
 This software code is licensed under the [GNU GENERAL PUBLIC LICENSE v3.0](./LICENSE) and uses third party libraries that are distributed under their own terms (see [LICENSE-3RD-PARTY.md](./LICENSE-3RD-PARTY.md)).
 
 ## Copyright
-© 2023 - University of Texas at El Paso (SWIM Project).
+© 2019-2023 - University of Texas at El Paso (SWIM Project).

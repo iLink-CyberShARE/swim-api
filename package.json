@@ -1,6 +1,6 @@
 {
   "name": "swim-api",
-  "version": "2.4.4",
+  "version": "2.6.2",
   "private": true,
   "dependencies": {
     "body-parser": "^1.19.0",

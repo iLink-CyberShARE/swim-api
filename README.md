@@ -43,8 +43,8 @@ You will need to have a user account linked to the user database.
 4. Using a command line or terminal navigate to the base path of the project.
 6. Comment the .env file on the .dockerignore.
 6. Rename the env file to .env and configure settings as needed.
-5. Build the image: $docker build -t swim-api:latest .
-7. Run the container: $docker run -p 3000:3000 dockeruser/swim-api
+5. Build the image: $docker build -t swim-api-public:latest .
+7. Run the container: $docker run -p 3000:3000 dockeruser/swim-api-public
 8. Swagger docs available at http://localhost:3000/api-docs
 
 ### Option 3: Native
@@ -57,11 +57,11 @@ You will need to have a user account linked to the user database.
 7. Swagger docs available at http://localhost:3000/api-docs
 
 ## Documentation
-[SWIM Architecture Docs](https://water.cybershare.utep.edu/resources/docs/en2/architecture/layer-view/)   
+[SWIM Architecture Docs](https://water.cybershare.utep.edu/resources/docs/en2/architecture/layered-view/)   
 [SWIM API Docs](https://water.cybershare.utep.edu/resources/docs/en2/backend/swim-api/)
 
 ## Contributors
-Luis Garnica Chavira - UTEP   
+Luis A Garnica Chavira - UTEP   
 Aaron Zambrano - UTEP   
 Ian Love - UTEP   
 
@@ -71,7 +71,7 @@ This material is based upon work supported by the National Science Foundation (N
 Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.  
 
 ## License
-GNU General Public License 3.0
+This software code is licensed under the [GNU GENERAL PUBLIC LICENSE v3.0](./LICENSE) and uses third party libraries that are distributed under their own terms (see [LICENSE-3RD-PARTY.md](./LICENSE-3RD-PARTY.md)).
 
 ## Copyright
-© 2022 - University of Texas at El Paso (SWIM Project).
+© 2023 - University of Texas at El Paso (SWIM Project).

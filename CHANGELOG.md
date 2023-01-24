@@ -3,9 +3,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
+## [2.6.3] - 2023-24-01
+#### Added
+- Third party licenses
+
 ## [2.6.2] - 2022-15-12
 #### Changed
-- Generic credentials for publi repository
+- Generic credentials for public repository
 
 ## [2.6.1] - 2022-22-09
 #### Added 

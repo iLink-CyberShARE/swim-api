@@ -7,6 +7,7 @@ package-lock.json
 
 # documentation folder is self generated with compodoc
 /documentation
+notes.txt
 
 # compiled output
 /dist

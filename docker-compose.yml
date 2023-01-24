@@ -2,7 +2,7 @@ version: '3.8'
 services:
     swim-api: 
         container_name: swim-api
-        image: lagarnicachavira/swim-api:latest
+        image: lagarnicachavira/swim-api-public:latest
         restart: always
         environment:
           NODE_ENV: production
@@ -33,7 +33,7 @@ services:
           - '9110:3000'
     swim-api-alt: 
         container_name: swim-api-alt
-        image: lagarnicachavira/swim-api:latest
+        image: lagarnicachavira/swim-api-public:latest
         restart: always
         environment:
           NODE_ENV: production
@@ -64,7 +64,7 @@ services:
           - '9111:3000'
     swim-api-alt2: 
         container_name: swim-api-alt2
-        image: lagarnicachavira/swim-api:latest
+        image: lagarnicachavira/swim-api-public:latest
         restart: always
         environment:
           NODE_ENV: production

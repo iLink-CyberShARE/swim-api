@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
+## [2.6.4] - 2023-02-02
+#### Added
+- Initialize empty user database with an admin and a guest account.
+- Auth source for mongodb connection string
+- guest and admin user environment variables
+
 ## [2.6.3] - 2023-24-01
 #### Added
 - Third party licenses

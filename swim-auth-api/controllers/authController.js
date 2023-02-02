@@ -93,11 +93,11 @@ AuthController.signUp = function (req, res) {
 };
 
 /**
- * Bypass to create user accounts from command line call
+ * Bypass to create user accounts if the user database is empty only
  * @param {*} email user email
  * @param {*} password user password
  */
-AuthController.createUsers = function (email, password) {
+AuthController.createUsers = function (email, password, flag) {
   //check required fields
   if (!email || !password) {
     console.log('Plese provide email and password');
@@ -109,19 +109,26 @@ AuthController.createUsers = function (email, password) {
         var newUser = {
           uemail: email,
           upassword: password,
-          ufirst_name: 'Admin',
-          ulast_name: 'Lite',
+          ufirst_name: 'sample',
+          ulast_name: 'sample',
           uinstitution: 'undefined',
           udepartment: 'undefined',
           urole: 'undefined',
-          is_guest: 0,
-          is_contentmanager: 1,
+          is_guest: !flag,
+          is_contentmanager: flag,
         };
-
-        //insert user into DB. Sign jwt token with email and id
-        return User.create(newUser).then(async function (user) {
-          return true;
-        });
+        //check if there are at least 2 users in the database
+        const count = User.count();
+        // assuming there are at least two accounts (for content manager and guest)
+        if (count < 2){ 
+          //insert user into DB. Sign jwt token with email and id
+          return User.create(newUser).then(async function (user) {
+            return true;
+          });
+        }
+        else
+         console.log('User database already contains users');
+         return false;
       })
       .catch(function (error) {
         console.log(error);

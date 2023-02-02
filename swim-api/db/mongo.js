@@ -12,6 +12,8 @@ const mongoURL =
   ":" +
   config.mongoDB.port +
   "/" +
-  config.mongoDB.name;
+  config.mongoDB.name +
+  "?authSource=" +
+  config.mongoDB.authsource;
 
 module.exports = mongoURL;

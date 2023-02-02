@@ -47,7 +47,8 @@ config.mongoDB = {
   password: process.env.SPASSWORD,
   name: process.env.SNAME,
   host: process.env.SHOST,
-  port: process.env.SPORT
+  port: process.env.SPORT,
+  authsource: process.env.SAUTH
 };
 
 /** Admin user account (admin login) */

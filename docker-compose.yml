@@ -1,15 +1,15 @@
 version: '3.8'
 services:
-    swim-api-3: 
-        container_name: swim-api-alt3
+    swim-api-1: 
+        container_name: swim-api-alt
         image: lagarnicachavira/swim-api-public:latest
         restart: always
         environment:
           NODE_ENV: production
           APPURL: localhost
-          SERVERDESCRIPTION: Server Node 3 - production
-          APPVERSION: 2.6.1
-          LHOST: host.docker.internal
+          SERVERDESCRIPTION: Server Node 1 - production
+          APPVERSION: 2.6.8
+          LHOST: host.docker.internal 
           LPORT: 3306
           LNAME: swim-logs
           LUSER: root
@@ -26,6 +26,7 @@ services:
           SNAME: swim-models
           SUSER: changeuser
           SPASSWORD: changepassword
+          SAUTH: admin
           # swim admin user account
           AUSER: admin@email.com
           APASSWORD: adminpassword
@@ -34,4 +35,4 @@ services:
           GPASSWORD: guestpassword
         ports:
           # <Local exposed port> : < application port running inside container>
-          - '9113:3000'
+          - '9111:3000'

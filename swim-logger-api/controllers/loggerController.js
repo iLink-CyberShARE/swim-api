@@ -7,8 +7,7 @@ var config = require("../../config"),
   level = require("../models/level"),
   event_category = require("../models/eventCategory"),
   execution_log = require("../models/executionLog"),
-  event_log = require("../models/eventLog"),
-  nav_log = require("../models/navLog");
+  event_log = require("../models/eventLog")
 
 const { validationResult } = require('express-validator');
 

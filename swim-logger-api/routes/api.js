@@ -169,8 +169,6 @@ var LoggerRoutes = function(passport) {
     validateToken, 
     body('modelId').not().isEmpty().trim().escape(),
     body('userScenarioId').not().isEmpty().trim().escape(),
-    body('startTime').not().isEmpty().trim().escape(),
-    body('endTime').not().isEmpty().trim().escape(),
     body('status').not().isEmpty().trim().escape(),
     LoggerController.executionLogUpdateStatus);
 

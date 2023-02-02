@@ -50,8 +50,6 @@ const onListening = () => {
 const port = normalizePort(process.env.PORT || "3000");
 app.set("port", port);
 
-// Check if the user database is empty, if so create the users
-
 console.log('Creating Content Manager...');
 AuthController.createUsers(config.admin.user, config.admin.password, 1);
 

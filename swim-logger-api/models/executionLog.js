@@ -19,9 +19,11 @@ var modelDefinition = {
     },
     start_time : {
         type : Sequelize.DATE,
+        allowNull: true
     },
     end_time : {
-        type : Sequelize.DATE
+        type : Sequelize.DATE,
+        allowNull: true
     },
     status : {
         type : Sequelize.STRING

@@ -12,10 +12,10 @@ var EventLog = require("../../swim-logger-api/models/eventLog");
 
 var hush = require("../../hush");
 
-var https = require('https');
-var fs = require('fs');
+var https = require("https");
+var fs = require("fs");
 
-const { validationResult } = require('express-validator');
+const { validationResult } = require("express-validator");
 
 // The authentication controller.
 var AuthController = {};
@@ -26,12 +26,11 @@ var AuthController = {};
  * @param res http response
  */
 AuthController.signUp = function (req, res) {
-
   // validations
   // const errors = validationResult(req);
   //if (!errors.isEmpty()) {
   //  return res.status(400).json({ errors: errors.array() });
-  //}  
+  //}
 
   //check required fields
   if (!req.body.email || !req.body.password) {
@@ -100,7 +99,7 @@ AuthController.signUp = function (req, res) {
 AuthController.createUsers = function (email, password, flag) {
   //check required fields
   if (!email || !password) {
-    console.log('Plese provide email and password');
+    console.log("Plese provide email and password");
   } else {
     db["auth"]
       .sync()
@@ -109,26 +108,25 @@ AuthController.createUsers = function (email, password, flag) {
         var newUser = {
           uemail: email,
           upassword: password,
-          ufirst_name: 'sample',
-          ulast_name: 'sample',
-          uinstitution: 'undefined',
-          udepartment: 'undefined',
-          urole: 'undefined',
+          ufirst_name: "sample",
+          ulast_name: "sample",
+          uinstitution: "undefined",
+          udepartment: "undefined",
+          urole: "undefined",
           is_guest: !flag,
           is_contentmanager: flag,
         };
         //check if there are at least 2 users in the database
-        const count = User.count();
-        // assuming there are at least two accounts (for content manager and guest)
-        if (count < 2){ 
-          //insert user into DB. Sign jwt token with email and id
-          return User.create(newUser).then(async function (user) {
-            return true;
-          });
-        }
-        else
-         console.log('User database already contains users');
-         return false;
+        User.count().then(async function (count) {
+          // assuming there are at least two accounts (for content manager and guest)
+          if (count < 2) {
+            //insert user into DB. Sign jwt token with email and id
+            return User.create(newUser).then(async function (user) {
+              return true;
+            });
+          } else console.log("User database already contains users");
+          return false;
+        });
       })
       .catch(function (error) {
         console.log(error);
@@ -143,12 +141,11 @@ AuthController.createUsers = function (email, password, flag) {
  * @param {*} res http response
  */
 AuthController.changePassword = function (req, res) {
-
   // validations
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return res.status(400).json({ errors: errors.array() });
-  }  
+  }
 
   // validate field arrival
   if (!req.body.newP || !req.body.oldP) {
@@ -211,12 +208,11 @@ AuthController.changePassword = function (req, res) {
  * @param res http response
  */
 AuthController.authenticateUser = function (req, res) {
-
   //validations
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return res.status(400).json({ errors: errors.array() });
-  }  
+  }
 
   //check required fields
   if (!req.body.isGuest && (!req.body.email || !req.body.password)) {
@@ -306,16 +302,15 @@ AuthController.authenticateUser = function (req, res) {
 
 function GenerateEmailUrl(email) {
   var options = {
-    'method': 'POST',
-    'hostname': 'water.cybershare.utep.edu',
-    'port': 443,
-    'path': '/register/GenerateUniqueURLService',
-    'headers': {
-    },
-    'maxRedirects': 20
+    method: "POST",
+    hostname: "water.cybershare.utep.edu",
+    port: 443,
+    path: "/register/GenerateUniqueURLService",
+    headers: {},
+    maxRedirects: 20,
   };
 
-  try{
+  try {
     var req = https.request(options, function (res) {
       var chunks = [];
 
@@ -333,12 +328,17 @@ function GenerateEmailUrl(email) {
       });
     });
 
-    var postData = "------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"email\"\r\n\r\n"+email+"\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW--";
-    req.setHeader('content-type', 'multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW');
+    var postData =
+      '------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name="email"\r\n\r\n' +
+      email +
+      "\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW--";
+    req.setHeader(
+      "content-type",
+      "multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW"
+    );
     req.write(postData);
     req.end();
-  }
-  catch(e) {
+  } catch (e) {
     console.log(e);
     var newEventLog = {
       level_id: 5,
@@ -348,7 +348,6 @@ function GenerateEmailUrl(email) {
     };
     EventLog.create(newEventLog);
   }
-
 }
 
 module.exports = AuthController;

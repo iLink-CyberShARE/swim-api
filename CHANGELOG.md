@@ -9,6 +9,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - Auth source for mongodb connection string
 - guest and admin user environment variables
 
+#### Fixed
+- Allow null end/start dates when a model execution fails.
+
 ## [2.6.3] - 2023-24-01
 #### Added
 - Third party licenses

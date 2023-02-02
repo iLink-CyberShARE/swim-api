@@ -4,9 +4,7 @@
 'use strict';
 
 var Sequelize = require('sequelize');
-
-var config = require('../../config'),
-    db = require('../../database');
+var db = require('../../database');
 
 var crypto = require('crypto');
 

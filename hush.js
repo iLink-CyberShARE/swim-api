@@ -31,6 +31,8 @@ var modelOptions = {
 // 3: Define the User model.
 var Hush = db['log'].define('hush', modelDefinition, modelOptions);
 
+console.log(db['log']);
+
 
 // The authentication controller.
 var HushController = {};
@@ -51,7 +53,8 @@ HushController.readHush = function() {
             }
         }
         ).catch(function(error) {
-            console.log("Error reading secret")
+            console.log(error);
+            console.log("Error reading secret");
         });
 }
 

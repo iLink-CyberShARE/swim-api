@@ -93,6 +93,44 @@ AuthController.signUp = function (req, res) {
 };
 
 /**
+ * Bypass to create user accounts from command line call
+ * @param {*} email user email
+ * @param {*} password user password
+ */
+AuthController.createUsers = function (email, password) {
+  //check required fields
+  if (!email || !password) {
+    console.log('Plese provide email and password');
+  } else {
+    db["auth"]
+      .sync()
+      .then(function () {
+        //create a new user with the given data
+        var newUser = {
+          uemail: email,
+          upassword: password,
+          ufirst_name: 'Admin',
+          ulast_name: 'Lite',
+          uinstitution: 'undefined',
+          udepartment: 'undefined',
+          urole: 'undefined',
+          is_guest: 0,
+          is_contentmanager: 1,
+        };
+
+        //insert user into DB. Sign jwt token with email and id
+        return User.create(newUser).then(async function (user) {
+          return true;
+        });
+      })
+      .catch(function (error) {
+        console.log(error);
+        return false;
+      });
+  }
+};
+
+/**
  * Changes password of connected user
  * @param {*} req http request
  * @param {*} res http response

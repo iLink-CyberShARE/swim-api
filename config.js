@@ -24,18 +24,20 @@ config.db = {
 
 config.db.details = {
   host: process.env.LHOST,
-  dialect: process.env.LDIALECT
+  port: process.env.LPORT,
+  dialect: process.env.LDIALECT,
 };
 
 /** Authentication Database */
 config.db2 = {
   user: process.env.UUSER,
   password: process.env.UPASSWORD,
-  name: process.env.UNAME
+  name: process.env.UNAME,
 };
 
 config.db2.details = {
   host: process.env.UHOST,
+  port: process.env.UPORT,
   dialect: process.env.UDIALECT
 };
 
@@ -46,6 +48,12 @@ config.mongoDB = {
   name: process.env.SNAME,
   host: process.env.SHOST,
   port: process.env.SPORT
+};
+
+/** Admin user account (admin login) */
+config.admin = {
+  user: process.env.AUSER,
+  password: process.env.APASSWORD,
 };
 
 /** Guest user account (guest login) */

@@ -21,6 +21,7 @@ package-lock.json
 # enviroment variables for development
 .env
 .env-sample
+env
 
 # ignore docker compose file
 docker-compose.yml

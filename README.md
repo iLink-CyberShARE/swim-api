@@ -1,4 +1,6 @@
 # SWIM Core Services
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FiLink-CyberShARE%2Fswim-api.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FiLink-CyberShARE%2Fswim-api?ref=badge_shield)
+
 Restful API for the Sustainable Water Through Integrated Modeling Platform.   
 
 This API provides a programmatic interface for the SWIM modeling database, user database and logger database.   
@@ -72,6 +74,9 @@ Any opinions, findings, and conclusions or recommendations expressed in this mat
 
 ## License
 This software code is licensed under the [GNU GENERAL PUBLIC LICENSE v3.0](./LICENSE) and uses third party libraries that are distributed under their own terms (see [LICENSE-3RD-PARTY.md](./LICENSE-3RD-PARTY.md)).
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FiLink-CyberShARE%2Fswim-api.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FiLink-CyberShARE%2Fswim-api?ref=badge_large)
 
 ## Copyright
 © 2019-2023 - University of Texas at El Paso (SWIM Project).

@@ -61,14 +61,26 @@ You will need to have a user account linked to the user database.
 [SWIM API Docs](https://water.cybershare.utep.edu/resources/docs/en2/backend/swim-api/)
 
 ## Contributors
-Luis A Garnica Chavira - UTEP   
-Aaron Zambrano - UTEP   
-Ian Love - UTEP   
-
+Luis A Garnica Chavira   
+Ian Love   
+Aaron Zambrano   
+    
 ## Acknowledgements
 This material is based upon work supported by the National Science Foundation (NSF) under Grant No. 1835897.   
 
 Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.  
+
+## How to cite
+If you create products such as publications using SWIM products, it would be great if you add the  following acknowledgement:   
+
+"This work used the Sustainable Water for Integrated Modeling (SWIM) 2.0, which was supported by the National Science Foundation under Grant No. 1835897."  
+
+Please use the following citation for this product:     
+
+Supporting Regional Water Sustainability Decision-Making through Integrated Modeling
+Garnica Chavira L., Villanueva-Rosales N., Heyman J., Pennington D., Salas K.
+2022 IEEE 8th International Smart Cities Conference, Paphos, Cyprus. September 26-29, 2022.
+DOI 10.1109/ISC255366.2022.9922004   
 
 ## License
 This software code is licensed under the [GNU GENERAL PUBLIC LICENSE v3.0](./LICENSE) and uses third party libraries that are distributed under their own terms (see [LICENSE-3RD-PARTY.md](./LICENSE-3RD-PARTY.md)).

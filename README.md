@@ -1,5 +1,5 @@
-# SWIM Core Services
-Restful API for the Sustainable Water Through Integrated Modeling Platform.   
+# SWIM-API 
+Restful API for the core backend services of the Sustainable Water Through Integrated Modeling Platform.   
 
 This API provides a programmatic interface for the SWIM modeling database, user database and logger database.   
 
